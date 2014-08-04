@@ -1,0 +1,12 @@
+body {
+    background-color: inherit;
+}
+a {
+    color: inherit;
+}
+/* Chrome prints footers by default, and this itty bitty margin
+gets pushed onto the 2nd page, thus printing a content-free 2nd
+page. */
+.education ul {
+    margin-bottom: 0;
+}
