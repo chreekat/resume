@@ -1,7 +1,7 @@
 body {
     position: relative;
     font-size: 11pt;
-    max-width: 80ex;
+    max-width: 85ex;
     margin-left: auto;
     margin-right: auto;
     background-color: hsl(170, 8%, 96%); /* "newspaper" */
@@ -11,6 +11,10 @@ body {
 
 a {
     text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
 }
 
 .contact {
@@ -50,6 +54,14 @@ dfn:hover {
 
 .workExperience li + li {
     padding-top: 0.6%;
+}
+
+.workExperienceTitle h2 {
+  display: inline-block;
+}
+
+.workExperienceTitle .updated {
+  display: none;
 }
 
 
