@@ -27,3 +27,7 @@ can get pushed onto the 2nd page, thus printing a content-free 2nd page. */
 dfn {
     border-bottom: 0;
 }
+
+html {
+    padding: 0;
+}

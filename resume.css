@@ -1,4 +1,7 @@
 /* Some global style/reset */
+html {
+  padding-top: 3em;
+}
 body {
   position: relative;
   font-size: 11pt;
