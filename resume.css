@@ -1,13 +1,26 @@
 /* Some global style/reset */
+html {
+  padding-top: 0.5in;
+  padding-bottom: 1in;
+}
 body {
   position: relative;
   font-size: 11pt;
   max-width: 85ex;
   margin-left: auto;
   margin-right: auto;
-  background-color: hsl(170, 8%, 96%); /* "newspaper" */
   margin-bottom: 0;
   font-family: "Times New Roman", Times, serif;
+}
+.dummy-page {
+  background-color: hsl(170, 8%, 96%); /* "newspaper" */
+  position: absolute;
+  top: -0.5in;
+  left: -1in;
+  height: 10.5in;
+  width: 8.5in;
+  z-index: -30;
+  box-shadow: 3px 3px 5px #888, 0px 0px 2px #888;
 }
 a {
   text-decoration: none;
