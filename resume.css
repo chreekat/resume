@@ -1,63 +1,72 @@
-section {
-  margin-top: -2px;
-}
-
+/* Some global style/reset */
 body {
-    position: relative;
-    font-size: 11pt;
-    max-width: 85ex;
-    margin-left: auto;
-    margin-right: auto;
-    background-color: hsl(170, 8%, 96%); /* "newspaper" */
-    margin-bottom: 0;
-    font-family: "Times New Roman", Times, serif;
+  position: relative;
+  font-size: 11pt;
+  max-width: 85ex;
+  margin-left: auto;
+  margin-right: auto;
+  background-color: hsl(170, 8%, 96%); /* "newspaper" */
+  margin-bottom: 0;
+  font-family: "Times New Roman", Times, serif;
 }
-
 a {
-    text-decoration: none;
+  text-decoration: none;
 }
-
 a:hover {
   text-decoration: underline;
 }
-
-.contact {
-    position: absolute;
-    right: 0; top: 0;
-    text-align: right;
+ul {
+  margin: 0;
 }
 
-.contact li {
-    list-style-type: none;
+/* header styling */
+header {
+  position: relative;
+  margin-bottom: 2px;
 }
 
 h1 {
-    position: relative;
-    left: -20px;
-    font-size: 3em;
-    font-family: Georgia, "Times New Roman", Times, serif;
-    margin: 0;
-    margin-bottom: .5ex;
-    letter-spacing: 0.05em;
+  position: relative;
+  left: -20px;
+  font-size: 2.5em;
+  line-height: 1;
+  font-family: Georgia, "Times New Roman", Times, serif;
+  margin: 0;
+  letter-spacing: 0.05em;
 }
 
+.contact {
+  position: absolute;
+  right: 0; bottom: 0;
+  text-align: right;
+}
+.contact-list {
+  margin: 0;
+}
+
+.contact li {
+  list-style-type: none;
+}
+
+/* top-level styling */
 h2 {
-    position: relative;
-    left: -0.5em;
-    margin: 0.3em 0;
+  position: relative;
+  left: -0.5em;
+  margin: 0.3em 0;
 }
 
-dfn {
-    font-style: normal;
-    border-bottom: 1px #999 dashed;
+/* experience */
+dfn.exp {
+  font-style: normal;
+  border-bottom: 1px #999 dashed;
 }
 
-dfn:hover {
-    background-color: hsl(170, 9%, 90%);
+dfn.exp:hover {
+  background-color: hsl(170, 9%, 90%);
 }
 
 .workExperience li + li {
-    padding-top: 0.6%;
+  padding-top: 0.6%;
 }
 
 .workExperienceTitle h2 {
@@ -69,58 +78,55 @@ dfn:hover {
 }
 
 
-/*
- * Work Experience Block
- */
+/* work experience blocks */
 .workExp {
-    position: relative;
-    padding-bottom: 2.2em;
+  position: relative;
+  padding-bottom: 2.2em;
 }
 
 .workExp .location,
 .workExp .role,
 .workExp .dates {
-    position: absolute;
-    font-style: italic;
+  position: absolute;
+  font-style: italic;
 }
 .workExp .employer,
 .workExp .role {
-    left: 0;
+  left: 0;
 }
 
 .workExp .location,
 .workExp .dates {
-    text-align: right;
-    right: 0;
+  text-align: right;
+  right: 0;
 }
 
 .workExp .role,
 .workExp .dates {
-    top: .95em;
+  top: .95em;
 }
 
 .workExp .employer {
-    position: absolute;
-    font-weight: bold;
+  position: absolute;
+  font-weight: bold;
 }
 
-ul {
-    margin-top: 0;
+ul + .workExp {
+  margin-top: 0.4em;
 }
-
 table {
-    margin-left: auto;
-    margin-right: auto;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 li table {
-    margin-left: 2.5em;
+  margin-left: 2.5em;
 }
 
 td + td {
-    padding-left: 4.5em;
+  padding-left: 4.5em;
 }
 
 td {
-    padding: 0em;
+  padding: 0em;
 }
