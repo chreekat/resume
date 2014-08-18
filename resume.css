@@ -84,17 +84,17 @@ dfn.exp:hover {
 /* work experience blocks */
 .workExp {
   position: relative;
-  padding-bottom: 2.2em;
+  padding-bottom: 2.3em;
 }
 
 .workExp .location,
-.workExp .role,
+.workExp .employer,
 .workExp .dates {
   position: absolute;
   font-style: italic;
 }
-.workExp .employer,
-.workExp .role {
+.workExp .role,
+.workExp .employer {
   left: 0;
 }
 
@@ -104,12 +104,12 @@ dfn.exp:hover {
   right: 0;
 }
 
-.workExp .role,
+.workExp .employer,
 .workExp .dates {
-  top: .95em;
+  top: 1em;
 }
 
-.workExp .employer {
+.workExp .role {
   position: absolute;
   font-weight: bold;
 }
