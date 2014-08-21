@@ -24,7 +24,7 @@ can get pushed onto the 2nd page, thus printing a content-free 2nd page. */
     content: ")";
 }
 
-dfn {
+dfn.exp {
     border-bottom: 0;
 }
 
