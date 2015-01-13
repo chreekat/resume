@@ -133,3 +133,8 @@ td + td {
 td {
   padding: 0em;
 }
+
+ol.education {
+    list-style: none;
+    padding-left: 1em;
+}
