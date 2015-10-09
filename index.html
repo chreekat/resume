@@ -1,5 +1,4 @@
 <!doctype html>
-<!-- vim: set sw=4 :-->
 <!-- Check me out at https://github.com/chreekat/resume! -->
 <html>
 <head>
@@ -14,17 +13,14 @@
 <body>
 
 <header>
+    <!-- Listed first to float nicely. -->
+    <ul class="contact-list">
+        <li><a target=_new href="http://chreekat.net"
+          >http://chreekat.net</a></li>
+        <li><a target=_new href="mailto:b@chreekat.net"
+          >b@chreekat.net</a></li>
+    </ul>
     <h1>Bryan Richter</h1>
-
-    <div class="contact">
-        <ul class="contact-list">
-            <li> <a target=_new
-                href="http://chreekat.net">http://chreekat.net</a>
-            <li> <a target=_new
-                href="mailto:b@chreekat.net"
-                >b@chreekat.net</a>
-        </ul>
-    </div>
 </header>
 
 <section class="execSummary">
@@ -34,6 +30,11 @@
             focus on quality.
         <li>
             Javascript, HTML5, Haskell, C++, SQL, Linux, and Free Software.
+        <!-- Dupe of above. :( -->
+        <li class="contact-list"
+          ><a target=_new href="http://chreekat.net"
+            >http://chreekat.net</a>, <a target=_new href="mailto:b@chreekat.net"
+            >b@chreekat.net</a>
     </ul>
 </section>
 
@@ -47,21 +48,33 @@
                 24 Aug 2014 in Woodland, California
                 31 Oct 2014 in Gothenburg, Sweden
                 03 Jan 2015 in Beauly, Scotland
+                13 Jan 2015 in Beauly, Scotland
             -->
             <dfn class="exp"
-                 title="Updated 13 Jan 2015 in Beauly, Scotland">
+                 title="Updated 08 Oct 2015 in Portland, Oregon">
                 Work Experience
             </dfn>
+            <div class="workexp-updated">
+                Updated 08 Oct 2015 in Portland, Oregon
+            </div>
         </h2>
-        <span class="updated">Updated 13 Jan 2015 in Beauly,
-            Scotland</span>
     </div>
 
     <div class="workExp">
+        <span class="role">Lead Developer</span>
         <span class="employer">
-            <a href="http://www.barobo.com/">Barobo, Inc.</a>
-        </span>
+            <a href="https://snowdrift.coop">Snowdrift.coop</a></span>
+        <span class="location">Portland, Oregon</span>
+        <span class="dates">February 2015–present</span>
+    </div>
+    <ul>
+        <li>
+            shtuff
+    </ul>
+    <div class="workExp">
         <span class="role">Computer Programmer</span>
+        <span class="employer">
+            <a href="http://www.barobo.com/">Barobo, Inc</a></span>
         <span class="location">Davis, California</span>
         <span class="dates">December 2013–October 2014</span>
     </div>
@@ -79,7 +92,6 @@
             robot-centered math and science curricula.
     </ul>
     <div class="workExp">
-        <span class="role">—</span>
         <span class="employer">Travel Sabbatical</span>
         <span class="location">USA and Europe</span>
         <span class="dates">March 2010–November 2013</span>
@@ -97,8 +109,8 @@
     </ul>
 
     <div class="workExp">
-        <span class="employer">Thomson Reuters (formerly Starmine – acquired 2008)</span>
         <span class="role">Sr. Software Engineer</span>
+        <span class="employer">Thomson Reuters (formerly Starmine – acquired 2008)</span>
         <span class="location">San Francisco</span>
         <span class="dates">November 2007–March 2010</span>
     </div>
@@ -115,9 +127,8 @@
     </ul>
 
     <div class="workExp">
+        <span class="role">Lead Web Developer and System Administrator</span>
         <span class="employer">iRadeon</span>
-        <span class="role">Lead Web Developer and System
-            Administrator</span>
         <span class="location">Sacramento, California</span>
         <span class="dates">June 2005–May 2007</span>
     </div>
@@ -132,8 +143,8 @@
 <section class="education">
     <h2>Education</h2>
     <div class="workExp">
-        <span class="employer">University of California at Davis</span>
         <span class="role">Bachelor of Science</span>
+        <span class="employer">University of California at Davis</span>
         <span class="location">Davis, California</span>
         <span class="dates">June 2005</span>
     </div>
@@ -143,7 +154,7 @@
             <!-- It would be great if this was a ul, but multi column uls
                  are fragile. As of 2013/09/24, Chrome ignores
                  -webkit-column-count when printing. -->
-            <table class="classList">
+            <table>
                <tr>
                    <td>Programming Language Theory</td>
                    <td>Numerical Methods</td>
@@ -165,7 +176,6 @@
     <h2>Volunteering</h2>
     <div class="workExp">
         <span class="employer">SOIC - The Swedish Ship Götheborg</span>
-        <span class="role">—</span>
         <span class="location">Gothenburg, Sweden</span>
         <span class="dates">February–April 2013, October–December 2014</span>
     </div>
@@ -178,3 +188,4 @@
     </ul>
 </body>
 </html>
+<!-- vim: set sw=4 ft=resume.html :-->

@@ -1,16 +1,16 @@
-/* Some global style/reset */
-html {
-  padding-top: 3em;
-}
+/*
+ * ALL SCREEN SIZES
+ *
+ */
+
+/*
+ * Nicer defaults
+ */
 body {
-  position: relative;
-  font-size: 11pt;
+  /* Off-white bg: "newspaper" */
+  background-color: hsl(170, 8%, 96%);
+  /* Keep line lengths legible */
   max-width: 85ex;
-  margin-left: auto;
-  margin-right: auto;
-  background-color: hsl(170, 8%, 96%); /* "newspaper" */
-  margin-bottom: 0;
-  font-family: "Times New Roman", Times, serif;
 }
 a {
   text-decoration: none;
@@ -18,123 +18,143 @@ a {
 a:hover {
   text-decoration: underline;
 }
-ul {
-  margin: 0;
-}
-
-/* header styling */
-header {
-  position: relative;
-  margin-bottom: 2px;
-}
-
-h1 {
-  position: relative;
-  left: -20px;
-  font-size: 2.5em;
-  line-height: 1;
-  font-family: Georgia, "Times New Roman", Times, serif;
-  margin: 0;
-  letter-spacing: 0.05em;
-}
-
-.contact {
-  position: absolute;
-  right: 0; bottom: 0;
-  text-align: right;
-}
-.contact-list {
-  margin: 0;
-}
-
-.contact li {
-  list-style-type: none;
-}
-
-/* top-level styling */
-h2 {
-  position: relative;
-  left: -0.5em;
-  margin: 0.3em 0;
-}
-
-/* experience */
-dfn.exp {
+dfn {
+  /* Styled appropriately, elsewhere, when hover available */
   font-style: normal;
-  border-bottom: 1px #999 dashed;
 }
 
-dfn.exp:hover {
-  background-color: hsl(170, 9%, 90%);
-}
-
-.workExperience li + li {
-  padding-top: 0.6%;
-}
-
-.workExperienceTitle h2 {
-  display: inline-block;
-}
-
-.workExperienceTitle .updated {
-  display: none;
-}
-
-
-/* work experience blocks */
-.workExp {
+/*
+ * Heading styling
+ */
+header {
+  /* Anchor the contact div */
   position: relative;
-  padding-bottom: 2.3em;
+}
+h1 {
+  /* h1 is my name, which should be big on a resume. */
+  letter-spacing: 0.05em;
+  font-size: 2.5rem;
+  /* The ul that follows has the margin instead */
+  margin-bottom: 0;
+}
+.execSummary ul {
+  margin-top: 0.5em;
+  margin-bottom: 2em;
+}
+.workexp-updated {
+  font-size: 1rem;
+  font-style: italic;
+  font-weight: normal;
 }
 
-.workExp .location,
-.workExp .employer,
-.workExp .dates {
-  position: absolute;
+/*
+ * Font styling for work experience headers
+ */
+.workExp {
   font-style: italic;
 }
-.workExp .role,
-.workExp .employer {
-  left: 0;
-}
-
-.workExp .location,
-.workExp .dates {
-  text-align: right;
-  right: 0;
-}
-
-.workExp .employer,
-.workExp .dates {
-  top: 1em;
-}
-
 .workExp .role {
-  position: absolute;
+  font-variant: small-caps;
   font-weight: bold;
+  font-style: normal;
 }
 
-ul + .workExp {
-  margin-top: 0.4em;
-}
+/*
+ * Table of courses taken (the only table so far)
+ */
 table {
   margin-left: auto;
   margin-right: auto;
 }
-
 li table {
   margin-left: 2.5em;
 }
-
 td + td {
   padding-left: 4.5em;
 }
-
 td {
   padding: 0em;
 }
 
-ol.education {
-    list-style: none;
-    padding-left: 1em;
+/*
+ * LITTLE SCREEN
+ *
+ */
+
+@media (max-width: 900px) {
+  /*
+   * Contrast these with the fancy versions that are used when real estate
+   * permits.
+   */
+  ul.contact-list {
+    display: none;
+  }
+  .workExp span:after {
+    content: ".";
+  }
+}
+
+/*
+ * BIG SCREEN
+ *
+ */
+
+@media (min-width: 901px) {
+  body {
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  /*
+   * Fancy work experience blocks
+   */
+  .workExp {
+    position: relative;
+    padding-bottom: 2.3em;
+  }
+  .workExp span {
+    position: absolute;
+  }
+  .workExp .role,
+  .workExp .employer {
+    left: 0;
+  }
+  .workExp .location,
+  .workExp .dates {
+    text-align: right;
+    right: 0;
+  }
+  .workExp .employer,
+  .workExp .dates {
+    top: 1em;
+  }
+
+  /*
+   * Fancy contact-list block
+   */
+  li.contact-list {
+    display: none;
+  }
+  ul.contact-list {
+    float: right;
+    text-align: right;
+    margin: 0;
+  }
+  .contact-list li {
+    list-style-type: none;
+  }
+
+  /*
+   * The other half of the workexp-updated/dfn toggle between big and small
+   * screens.
+   */
+  .workexp-updated {
+    display: none;
+  }
+  dfn.exp {
+    border-bottom: 1px #999 dashed;
+  }
+  dfn.exp:hover {
+    background-color: hsl(170, 9%, 90%);
+  }
 }
