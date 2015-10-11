@@ -1,35 +1,55 @@
 /*
- * ALL SCREEN SIZES
+ * Nicer defaults
  *
  */
 
-/*
- * Nicer defaults
- */
-body {
-  /* Off-white bg: "newspaper" */
-  background-color: hsl(170, 8%, 96%);
-  /* Keep line lengths legible */
-  max-width: 85ex;
-}
 a {
   text-decoration: none;
 }
 a:hover {
   text-decoration: underline;
 }
-dfn {
-  /* Styled appropriately, elsewhere, when hover available */
-  font-style: normal;
+@media screen {
+  body {
+    /* Off-white bg: "newspaper" */
+    background-color: hsl(170, 8%, 96%);
+    /* Keep line lengths legible */
+    max-width: 85ex;
+  }
+}
+@media screen and (min-width: 901px) {
+  body {
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+@media print {
+  a {
+    color: inherit;
+  }
+}
+
+/*
+ * Page header
+ *
+ */
+
+.pagebreak {
+  display: none;
+}
+@media print {
+  .pagebreak {
+    display: inherit;
+    page-break-before: always;
+    font-size: small;
+  }
 }
 
 /*
  * Heading styling
+ *
  */
-header {
-  /* Anchor the contact div */
-  position: relative;
-}
+
 h1 {
   /* h1 is my name, which should be big on a resume. */
   letter-spacing: 0.05em;
@@ -41,15 +61,42 @@ h1 {
   margin-top: 0.5em;
   margin-bottom: 2em;
 }
+
+/*
+ * Fancy workexp-updated text. Part dfn, part list, depending on media.
+ *
+ */
+
 .workexp-updated {
-  font-size: 1rem;
-  font-style: italic;
   font-weight: normal;
+  font-size: small;
+}
+.workexp-updated:before {
+    content: "(";
+}
+.workexp-updated:after {
+    content: ")";
+}
+dfn {
+  font-style: normal;
+}
+@media screen and (min-width: 901px) {
+  .workexp-updated {
+    display: none;
+  }
+  dfn.exp {
+    border-bottom: 1px #999 dashed;
+  }
+  dfn.exp:hover {
+    background-color: hsl(170, 9%, 90%);
+  }
 }
 
 /*
- * Font styling for work experience headers
+ * Fancy work experience header blocks
+ *
  */
+
 .workExp {
   font-style: italic;
 }
@@ -58,10 +105,63 @@ h1 {
   font-weight: bold;
   font-style: normal;
 }
+.workExp {
+  position: relative;
+  padding-bottom: 2.3em;
+}
+.workExp span {
+  position: absolute;
+}
+.workExp .role,
+.workExp .employer {
+  left: 0;
+}
+.workExp .location,
+.workExp .dates {
+  text-align: right;
+  right: 0;
+}
+.workExp .employer,
+.workExp .dates {
+  top: 1em;
+}
+/* Because CSS doesn't use @media for specificity, AND because @media
+ * queries can't do OR, AND because order matters in CSS, this *has* to be
+ * here!! Jesus what the fuck. The alternative, maybe better, is to
+ * duplicate the above section, once for width>901px and once for print. I
+ * dunno.
+ */
+@media screen and (max-width: 900px) {
+  .workExp span:after {
+    content: ".";
+  }
+  .workExp {
+    position: inherit;
+    padding-bottom: inherit;
+  }
+  .workExp span {
+    position: inherit;
+  }
+  .workExp .role,
+  .workExp .employer {
+    left: inherit;
+  }
+  .workExp .location,
+  .workExp .dates {
+    text-align: inherit;
+    right: inherit;
+  }
+  .workExp .employer,
+  .workExp .dates {
+    top: inherit;
+  }
+}
 
 /*
  * Table of courses taken (the only table so far)
+ *
  */
+
 table {
   margin-left: auto;
   margin-right: auto;
@@ -77,61 +177,15 @@ td {
 }
 
 /*
- * LITTLE SCREEN
+ * Fancy contact-list block
  *
  */
 
-@media (max-width: 900px) {
-  /*
-   * Contrast these with the fancy versions that are used when real estate
-   * permits.
-   */
-  ul.contact-list {
-    display: none;
-  }
-  .workExp span:after {
-    content: ".";
-  }
+header {
+  /* Anchor the contact-list */
+  position: relative;
 }
-
-/*
- * BIG SCREEN
- *
- */
-
-@media (min-width: 901px) {
-  body {
-    margin-left: auto;
-    margin-right: auto;
-  }
-
-  /*
-   * Fancy work experience blocks
-   */
-  .workExp {
-    position: relative;
-    padding-bottom: 2.3em;
-  }
-  .workExp span {
-    position: absolute;
-  }
-  .workExp .role,
-  .workExp .employer {
-    left: 0;
-  }
-  .workExp .location,
-  .workExp .dates {
-    text-align: right;
-    right: 0;
-  }
-  .workExp .employer,
-  .workExp .dates {
-    top: 1em;
-  }
-
-  /*
-   * Fancy contact-list block
-   */
+/* @media screen and (min-width: 901px) { */
   li.contact-list {
     display: none;
   }
@@ -143,18 +197,12 @@ td {
   .contact-list li {
     list-style-type: none;
   }
-
-  /*
-   * The other half of the workexp-updated/dfn toggle between big and small
-   * screens.
-   */
-  .workexp-updated {
+/* } */
+@media screen and (max-width: 900px) {
+  li.contact-list {
+    display: list-item;
+  }
+  ul.contact-list {
     display: none;
-  }
-  dfn.exp {
-    border-bottom: 1px #999 dashed;
-  }
-  dfn.exp:hover {
-    background-color: hsl(170, 9%, 90%);
   }
 }
