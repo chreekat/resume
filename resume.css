@@ -97,11 +97,10 @@ dfn {
  *
  */
 
-.workExp {
-  font-style: italic;
-}
+/* .workExp { */
+/*   font-style: italic; */
+/* } */
 .workExp .role {
-  font-variant: small-caps;
   font-weight: bold;
   font-style: normal;
 }
@@ -113,17 +112,18 @@ dfn {
   position: absolute;
 }
 .workExp .role,
-.workExp .employer {
+.workExp .dates {
   left: 0;
 }
 .workExp .location,
-.workExp .dates {
+.workExp .employer {
   text-align: right;
   right: 0;
 }
-.workExp .employer,
+.workExp .location,
 .workExp .dates {
   top: 1em;
+  font-style: italic;
 }
 /* Because CSS doesn't use @media for specificity, AND because @media
  * queries can't do OR, AND because order matters in CSS, this *has* to be
