@@ -97,12 +97,8 @@ dfn {
  *
  */
 
-/* .workExp { */
-/*   font-style: italic; */
-/* } */
 .workExp .role {
   font-weight: bold;
-  font-style: normal;
 }
 .workExp {
   position: relative;
@@ -134,6 +130,9 @@ dfn {
 @media screen and (max-width: 900px) {
   .workExp span:after {
     content: ".";
+  }
+  .workExp .employer {
+    font-style: italic;
   }
   .workExp {
     position: inherit;
