@@ -61,7 +61,11 @@ h1 {
   margin-top: 0.5em;
   margin-bottom: 2em;
 }
-
+@media print {
+  .execSummary ul {
+    margin-bottom: 1.5em;
+  }
+}
 /*
  * Fancy workexp-updated text. Part hovertext, part little text, depending on media.
  *
