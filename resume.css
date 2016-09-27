@@ -21,11 +21,15 @@ a:hover {
   body {
     margin-left: auto;
     margin-right: auto;
+    margin-top: 3em;
   }
 }
 @media print {
   a {
     color: inherit;
+  }
+  body {
+    font: 12pt/1.2  Georgia,"Bitstream Charter",serif;
   }
 }
 
@@ -53,9 +57,8 @@ a:hover {
 h1 {
   /* h1 is my name, which should be big on a resume. */
   letter-spacing: 0.05em;
-  font-size: 2.5rem;
-  /* The ul that follows has the margin instead */
-  margin-bottom: 0;
+  font-size: 2.5em;
+  margin: 0;
 }
 .execSummary ul {
   margin-top: 0.5em;
@@ -73,7 +76,8 @@ h1 {
 
 .workexp-updated {
   font-weight: normal;
-  font-size: small;
+  /* FIXME: This should be specified relative to the default (currently 12pt) */
+  font-size: 10pt;
 }
 .workexp-updated:before {
     content: "(";
