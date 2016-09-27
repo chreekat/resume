@@ -78,12 +78,7 @@ h1 {
   font-weight: normal;
   /* FIXME: This should be specified relative to the default (currently 12pt) */
   font-size: 10pt;
-}
-.workexp-updated:before {
-    content: "(";
-}
-.workexp-updated:after {
-    content: ")";
+  margin-left: 1rem;
 }
 @media screen and (min-width: 901px) {
   .workexp-updated {
@@ -103,7 +98,7 @@ h1 {
  */
 
 /* TODO: Rewrite this using "or" queries. */
-.workExp .role {
+.workExp .role:not(.sabbatical) {
   font-weight: bold;
 }
 .workExp {
