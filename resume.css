@@ -29,24 +29,17 @@ a:hover {
     color: inherit;
   }
   body {
-    font: 12pt/1.2  Georgia,"Bitstream Charter",serif;
+    font: 11pt/1.2  Georgia,"Bitstream Charter",serif;
   }
 }
 
-/*
- * Page header
- *
- */
-
-.pagebreak {
-  display: none;
+/* Try to only break at the start of a section
+*/
+section, h2, h1 {
+  page-break-after: avoid;
 }
-@media print {
-  .pagebreak {
-    display: inherit;
-    page-break-before: always;
-    font-size: small;
-  }
+.workExpBlock {
+  page-break-inside: avoid;
 }
 
 /*
