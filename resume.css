@@ -145,6 +145,16 @@ h1 {
   }
 }
 
+/* Project context blurb at the bottom of a workExp block. */
+.workExpBlock .project-context {
+    font-family: sans-serif;
+    font-style: italic;
+    font-size: 85%;
+    margin: 8px 2rem;
+}
+.workExpBlock .project-context + ul {
+    margin-top: 8px;
+}
 /*
  * Table of courses taken (the only table so far)
  *
