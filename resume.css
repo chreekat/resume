@@ -1,217 +1,294 @@
-/*
- * Nicer defaults
- *
- */
+/* General Reset */
+body, h1, h2, h3, p, ul, li, table, span, a {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Arial', sans-serif;
+  line-height: 1.6;
+  color: #333;
+  background-color: #f7f7f7;
+  padding: 1rem;
+}
 
 a {
+  color: #007acc;
   text-decoration: none;
 }
+
 a:hover {
   text-decoration: underline;
 }
-@media screen {
-  body {
-    /* Off-white bg: "newspaper" */
-    background-color: hsl(170, 8%, 96%);
-    /* Keep line lengths legible */
-    max-width: 85ex;
-  }
+
+h1, h2 {
+  margin-bottom: 0.5rem;
 }
-@media screen and (min-width: 901px) {
-  body {
-    margin-left: auto;
-    margin-right: auto;
-    margin-top: 3em;
-  }
+
+ul {
+  list-style-type: disc;
+  margin-left: 1.5rem;
 }
-@media print {
-  a {
-    color: inherit;
-  }
-  body {
-    font: 11pt/1.2  Georgia,"Bitstream Charter",serif;
-  }
+
+/* Header */
+header {
+  background-color: #007acc;
+  color: white;
+  padding: 1rem;
+  margin-bottom: 1.5rem;
+  text-align: center;
+}
+
+header h1 {
+  font-size: 2rem;
+}
+
+header .contact-list {
+  list-style: none;
+  margin-top: 0.5rem;
+}
+
+/* Section Titles */
+section h2 {
+  font-size: 1.5rem;
+  border-bottom: 2px solid #007acc;
+  margin-bottom: 0.5rem;
+  padding-bottom: 0.2rem;
+  color: #007acc;
+}
+
+/* Work Experience */
+.workExperience {
+  margin-bottom: 2rem;
+}
+
+.workExpBlock {
+  margin-bottom: 1rem;
+  padding: 1rem;
+  background-color: white;
+  border-radius: 5px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+.workExpBlock .workExp span {
+  display: block;
+  font-weight: bold;
+}
+
+.workExpBlock ul {
+  margin-top: 0.5rem;
+}
+
+.workExpBlock li {
+  margin-bottom: 0.5rem;
+}
+
+/* Project Context */
+.project-context {
+  font-style: italic;
+  margin-top: 0.5rem;
+  margin-bottom: 0.5rem;
+}
+
+/* Education */
+table {
+  margin-top: 0.5rem;
+  width: 100%;
+  border-spacing: 0.5rem;
+}
+
+table td {
+  padding: 0.5rem;
+  background-color: #f1f1f1;
+  border-radius: 5px;
+}
+
+/* Volunteering */
+.volunteering ul {
+  margin-top: 0.5rem;
+}
+
+/* Footer */
+footer {
+  margin-top: 2rem;
+  text-align: center;
+  font-size: 0.8rem;
+}
+
+footer a {
+  color: #007acc;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+/* General Reset */
+body, h1, h2, h3, p, ul, li, table, span, a {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+
+body {
+  font-family: 'Arial', sans-serif;
+  line-height: 1.6;
+  color: #333;
+  background-color: #f7f7f7;
+  padding: 1rem;
+}
+
+a {
+  color: #4CAF50;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+  color: #3e8e41; /* Slightly darker green for hover */
+}
+
+h1, h2 {
+  margin-bottom: 0.5rem;
+}
+
+ul {
+  list-style-type: disc;
+  margin-left: 1.5rem;
+}
+
+/* Header */
+header {
+  background-color: #4CAF50; /* Warm, earthy green */
+  color: white;
+  padding: 1rem;
+  margin-bottom: 1.5rem;
+  text-align: center;
+}
+
+header h1 {
+  font-size: 2rem;
+}
+
+header .contact-list {
+  list-style: none;
+  margin-top: 0.5rem;
+}
+
+/* Contact List */
+header .contact-list {
+  list-style: disc inside; /* Adds visible bullets inside the list */
+  padding: 0; /* Removes extra padding */
+  margin: 0;
+  text-align: center;
+}
+
+header .contact-list li {
+  display: inline-block; /* Aligns items horizontally */
+  margin: 0 0.5rem; /* Adds spacing between items */
+  font-size: 1rem;
+}
+
+header .contact-list a {
+  color: white;
+  text-decoration: none;
+}
+
+header .contact-list a:hover {
+  text-decoration: underline;
+}
+
+/* Section Titles */
+section h2 {
+  font-size: 1.5rem;
+  margin-bottom: 0.5rem;
+  padding-bottom: 0.2rem;
+  border-bottom: 2px solid #4CAF50;
+  color: #4CAF50;
+}
+
+/* Work Experience */
+.workExpBlock {
+  margin-bottom: 1rem;
+  padding: 0.8rem;
+  background-color: white;
+  border-radius: 5px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+.workExpBlock .workExp span {
+  display: inline-block; /* Changed to inline-block to reduce spacing */
+  font-weight: bold;
+  margin-right: 0.5rem;
+}
+
+.workExpBlock ul {
+  margin-top: 0.3rem; /* Reduced top margin */
+}
+
+.workExpBlock li {
+  margin-bottom: 0.3rem; /* Reduced bottom margin between list items */
+  line-height: 1.4; /* Adjusted line spacing */
+}
+
+/* General Spacing Adjustments */
+.workExp span.dates,
+.workExp span.location,
+.workExp span.employer {
+  font-size: 0.9rem; /* Slightly smaller font size */
+  color: #555; /* Lighter color for secondary details */
+}
+
+/* Volunteering */
+.volunteering ul {
+  margin-top: 0.5rem;
+}
+
+/* Footer */
+footer {
+  margin-top: 2rem;
+  text-align: center;
+  font-size: 0.8rem;
+}
+
+footer a {
+  color: #007acc;
+}
+
+
+/* Updated Color Scheme */
+header {
+  background-color: #556B2F; /* Muted earthy green */
+  color: white;
+}
+
+section h2 {
+  border-bottom: 2px solid #556B2F;
+  color: #556B2F;
+}
+
+a {
+  color: #556B2F;
+}
+
+a:hover {
+  color: #3C5A24; /* Slightly darker green for hover */
 }
 
 /* Try to only break at the start of a section
 */
-section, h2, h1 {
+h2, h1 {
   page-break-after: avoid;
 }
-.workExpBlock {
+.workExpBlock, .no-page-break {
   page-break-inside: avoid;
 }
-
-/*
- * Heading styling
- *
- */
-
-h1 {
-  /* h1 is my name, which should be big on a resume. */
-  letter-spacing: 0.05em;
-  font-size: 2.5em;
-  margin: 0;
-}
-.execSummary ul {
-  margin-top: 0.5em;
-  margin-bottom: 2em;
-}
-@media print {
-  .execSummary ul {
-    margin-bottom: 1.5em;
-  }
-}
-/*
- * Fancy workexp-updated text. Part hovertext, part little text, depending on media.
- *
- */
-
-.workexp-updated {
-  font-weight: normal;
-  /* FIXME: This should be specified relative to the default (currently 12pt) */
-  font-size: 10pt;
-  margin-left: 1rem;
-}
-@media screen and (min-width: 901px) {
-  .workexp-updated {
-    display: none;
-  }
-  span.exp {
-    border-bottom: 1px #999 dashed;
-  }
-  span.exp:hover {
-    background-color: hsl(170, 9%, 90%);
-  }
-}
-
-/*
- * Fancy work experience header blocks
- *
- */
-
-/* TODO: Rewrite this using "or" queries. */
-.workExp .role:not(.sabbatical) {
-  font-weight: bold;
-}
-.workExp {
-  position: relative;
-  padding-bottom: 2.3em;
-}
-.workExp span {
-  position: absolute;
-}
-.workExp .role,
-.workExp .dates {
-  left: 0;
-}
-.workExp .location,
-.workExp .employer {
-  text-align: right;
-  right: 0;
-}
-.workExp .location,
-.workExp .dates {
-  top: 1em;
-  font-style: italic;
-}
-/* This resets some stuff. Would be cleaner to use "or" queries; see above. */
-@media screen and (max-width: 900px) {
-  .workExp span:after {
-    content: ".";
-  }
-  .workExp .employer {
-    font-style: italic;
-  }
-  .workExp {
-    position: inherit;
-    padding-bottom: inherit;
-  }
-  .workExp span {
-    position: inherit;
-  }
-  .workExp .role,
-  .workExp .employer {
-    left: inherit;
-  }
-  .workExp .location,
-  .workExp .dates {
-    text-align: inherit;
-    right: inherit;
-  }
-  .workExp .employer,
-  .workExp .dates {
-    top: inherit;
-  }
-}
-
-/* Project context blurb at the bottom of a workExp block. */
-.workExpBlock .project-context {
-    font-family: sans-serif;
-    font-style: italic;
-    font-size: 85%;
-    margin: 8px 2rem;
-}
-.workExpBlock .project-context + ul {
-    margin-top: 8px;
-}
-/*
- * Table of courses taken (the only table so far)
- *
- */
-
-table {
-  margin-left: auto;
-  margin-right: auto;
-}
-li table {
-  margin-left: 2.5em;
-}
-td + td {
-  padding-left: 4.5em;
-}
-td {
-  padding: 0em;
-}
-
-/*
- * Fancy contact-list block
- *
- */
-
-header {
-  /* Anchor the contact-list */
-  position: relative;
-}
-/* TODO: Also use "or" here.
-/* @media screen and (min-width: 901px) { */
-  li.contact-list {
-    display: none;
-  }
-  ul.contact-list {
-    float: right;
-    text-align: right;
-    margin: 0;
-  }
-  .contact-list li {
-    list-style-type: none;
-  }
-/* } */
-@media screen and (max-width: 900px) {
-  li.contact-list {
-    display: list-item;
-  }
-  ul.contact-list {
-    display: none;
-  }
-}
-
-/*
- * Small-screen nav footer
- *
- */
-
-.small-screen-nav {
-  display: none;
-}
-/* Todo: real display on small screens */
