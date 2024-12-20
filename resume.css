@@ -315,7 +315,7 @@ h2, h1 {
   /* FIXME: This should be specified relative to the default (currently 12pt) */
   font-size: 10pt;
 }
-@media screen and (min-width: 901px) {
+@media screen {
   .workexp-updated {
     display: none;
   }
